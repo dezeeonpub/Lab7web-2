@@ -7,7 +7,7 @@
 Untuk memulai membuat aplikasi CRUD sederhana, yang perlu dipersiapkan adalah database server menggunakan MySQL. pastikan MySQL server sudah dapat dijalankan melalui XAMPP.
 
 ## 1). MEMBUAT DATABASE
-![create-database](img/create-database.png)
+![create-database](https://github.com/Herli27052000/Lab11Web/blob/master/img/create-database.png)
 
 **PENJELASAN**
 
@@ -18,7 +18,7 @@ CREATE DATABASE lab_ci4;
 ```
 
 ## 2). MEMBUAT TABEL
-![create-table](img/create-table.png)
+![create-table](https://github.com/Herli27052000/Lab11Web/blob/master/img/create-table.png)
 
 ```mySQL
 CREATE TABLE artikel (
@@ -35,14 +35,14 @@ CREATE TABLE artikel (
 
 Membuat tabel 
 
-![database-artikel](img/database-artikel.png)
+![database-artikel](https://github.com/Herli27052000/Lab11Web/blob/master/img/database-artikel.png)
 
 Database berhasil dibuat
 
 ## 3). KONFIGURASI KONEKSI DATABASE
 Konfigurasi dapat dilakukan dengan dua cara,yaitu pada file **app/config/database.php** atau menggunakan file **.env**. Pada praktikum ini kita gunakan konfigurasi pada file .env.
 
-![konfigurasi-database](img/konfigurasi-database.png)
+![konfigurasi-database](https://github.com/Herli27052000/Lab11Web/blob/master/img/konfigurasi-database.png)
 
 **PENJELASAN**
 
@@ -51,7 +51,7 @@ Hapus tanda **#** pada bagian database seperti di atas di file **.env**
 ## 4). MEMBUAT MODEL
 Selanjutnya membuat Model untuk memproses data Artikel. Buat file baru pada direktori **app/Models** dengan nama **ArtikelModel.php**
 
-![artikel-models](img/artikel-models.png)
+![artikel-models](https://github.com/Herli27052000/Lab11Web/blob/master/img/artikel-models.png)
 
 **code ArtikelModel**
 ```php
@@ -73,7 +73,7 @@ class ArtikelModel extends Model
 ## 5). MEMBUAT CONTROLLER
 Buat Controller baru dengan nama **Artikel.php** pada direktori **app/Controllers.**
 
-![artikel-Controllers](img/artikel-controllers.png)
+![artikel-Controllers](https://github.com/Herli27052000/Lab11Web/blob/master/img/artikel-controllers.png)
 
 **code Artikel.php**
 ```php
@@ -122,26 +122,26 @@ Buat direktori baru dengan nama **artikel** pada direktori **app/views,** kemudi
 Kemudian Refresh kembali pada browser maka tampilannya akan seperti  gambar dibawah, belum ada data karena belum melakukan insert pada database. URL: http://localhost:8080/artikel
 
 
-![localhost-artikel](img/localhost-artikel.png)
+![localhost-artikel](https://github.com/Herli27052000/Lab11Web/blob/master/img/localhost-artikel.png)
 
 **PENJELASAN**
 
 Belum ada data yang ditampilkan. Kemudian coba tambahkan beberapa data pada database agar dapat ditampilkan datanya.
 
-![insert](img/insert.png)
+![insert](https://github.com/Herli27052000/Lab11Web/blob/master/img/insert.png)
 
 **PENJELASAN**
 
 Insert atau tambah data pada database dan tabel artikel kemudian refresh kembali pada browser dan tampilannya akan seperti gambar dibawah.
 
-![setelah-insert](img/setelah-insert.png)
+![setelah-insert](https://github.com/Herli27052000/Lab11Web/blob/master/img/setelah-insert.png)
 Tampilan Artikel
 
 
 ## 7). MEMBUAT TAMPILAN DETAIL ARTIKEL
 Tampilan pada saat judul berita di klik maka akan diarahkan ke halaman yang berbeda. Tambahkan fungsi baru pada **Controller Artikel** dengan nama **view().**
 
-![code-artikel](img/code-artikel.png)
+![code-artikel](https://github.com/Herli27052000/Lab11Web/blob/master/img/code-artikel.png)
 
 **code view() pada artikel.php**
 ```php
@@ -163,7 +163,7 @@ public function view($slug)
 ## 8). MEMBUAT VIEW DETAIL
 Buat view baru untuk halaman detail dengan nama **app/views/artikel/detail.php**
 
-![view-detail](img/view-detail.png)
+![view-detail](https://github.com/Herli27052000/Lab11Web/blob/master/img/view-detail.png)
 
 **code detail.php**
 ```php
@@ -186,22 +186,22 @@ Buka Kembali file **app/config/Routes.php** kemudian tambahkan routing untuk art
 $routes->get('/artikel/(:any)', 'Artikel::view/$1');
 ```
 
-![routes-artikel](img/routing-artikel.png)
+![routes-artikel](https://github.com/Herli27052000/Lab11Web/blob/master/img/routing-artikel.png)
 
 Kemudian refresh dan klik pada bagian link **Artikel pertama** atau pun **Artikel kedua**
 
-![artikel-pertama](img/artikel-pertama.png)
+![artikel-pertama](https://github.com/Herli27052000/Lab11Web/blob/master/img/artikel-pertama.png)
 
 Di atas adalah contoh Detail artikel pertama
 
-![artikel-kedua](img/artikel-kedua.png)
+![artikel-kedua](https://github.com/Herli27052000/Lab11Web/blob/master/img/artikel-kedua.png)
 
 Di atas adalah contoh Detail artikel kedua
 
 ## 10). MEMBUAT MENU ADMIN
 Menu admin adalah untuk proses CRUD data artikel. Buat method baru pada **Controller Artikel** dengan nama **admin_index().**
 
-![admin_index()](img/admin_index().png)
+![admin_index()](https://github.com/Herli27052000/Lab11Web/blob/master/img/admin_index().png)
 
 **code admin_index()**
 ```php
@@ -216,7 +216,7 @@ public function admin_index()
 
 * Selanjutnya buat view untuk tampilan admin dengan nama **admin_index.php**
 
-![code-admin-index()](img/code-admin-index().png)
+![code-admin-index()](https://github.com/Herli27052000/Lab11Web/blob/master/img/code-admin-index().png)
 
 **code admin_index.php**
 ```php
@@ -265,7 +265,7 @@ public function admin_index()
 ```
 
 * Tambahkan routing untuk menu admin seperti berikut:
-![routes-admin](img/routes-admin.png)
+![routes-admin](https://github.com/Herli27052000/Lab11Web/blob/master/img/routes-admin.png)
 
 **code routes admin**
 ```php
@@ -279,7 +279,7 @@ $routes->group('admin', function($routes) {
 
 * Setelah itu buat **Template header** dan **footer** baru untuk **Halaman Admin**. Buat file baru dengan nama **admin_header.php** pada direktori **app/view/template**
 
-![admin-header](img/admin_header.png)
+![admin-header](https://github.com/Herli27052000/Lab11Web/blob/master/img/admin_header.png)
 
 **code admin_header.php**
 ```html
@@ -306,7 +306,7 @@ $routes->group('admin', function($routes) {
 
 * Dan buat file baru lagi dengan nama **admin_footer.php** pada direktori **app/views/template** 
 
-![admin-footer](img/admin_footer.png)
+![admin-footer](https://github.com/Herli27052000/Lab11Web/blob/master/img/admin_footer.png)
 
 **code admin_footer.php**
 ```html
@@ -320,19 +320,18 @@ $routes->group('admin', function($routes) {
 
 * Kemudian buat file baru lagi dengan nama **admin.css** pada direktori **ci4/public** untuk mempercantik tampilan **Halaman admin.**
 
-![admin-css](img/admin-css.png)
+![admin-css](https://github.com/Herli27052000/Lab11Web/blob/master/img/admin-css.png)
 
 * Akses menu admin dengan URL: http://localhost:8080/admin/artikel
 
 Maka tampilannya akan seperti gambar dibawah
 
-![admin-view](img/admin-view.png)
+![admin-view](https://github.com/Herli27052000/Lab11Web/blob/master/img/admin-view.png)
 
 ## 11). MENAMBAHKAN DATA ARTIKEL
 Tambahkan fungsi/method baru pada **Controllers Artikel** dengan nama **add().**
 
-![function-add](img/function-add.png)
-
+![function-add](https://github.com/Herli27052000/Lab11Web/blob/master/img/function-add.png)
 **code function add**
 ```php
 public function add()
@@ -358,7 +357,7 @@ public function add()
 
 * Kemudian buat view untuk form tambah dengan nama **form_add.php** 
 
-![form-add](img/form_add.png)
+![form-add](https://github.com/Herli27052000/Lab11Web/blob/master/img/form_add.png)
 
 **code form_add.php**
 ```html
@@ -378,14 +377,11 @@ public function add()
 <?= $this->include('template/admin_footer'); ?>
 ```
 
-* Kemudian klik menu **Tambah Artikel** dan tampilannya akan seperti gambar dibawah.
-
-![tambah-artikel](img/tambah-artikel.png)
 
 ## 12). MENGUBAH DATA
 Tambahkan fungsi/method baru pada **Controllers Artikel** dengan nama **edit().**
 
-![function-edit](img/function-edit.png)
+![function-edit](https://github.com/Herli27052000/Lab11Web/blob/master/img/function-edit.png)
 
 **code function edit**
 ```php
@@ -415,7 +411,7 @@ public function edit($id)
 
 * Kemudian buat view untuk form tambah dengan nama **form_edit.php**
 
-![form-edit](img/form-edit.png)
+![form-edit](https://github.com/Herli27052000/Lab11Web/blob/master/img/form-edit.png)
 
 **code form_edit.php**
 ```html
@@ -433,18 +429,18 @@ public function edit($id)
 
 * Kemudian klik **ubah** pada salah satu artikel 
 
-![edit-artikel1](img/edit-artikel1.png)
+![edit-artikel1](https://github.com/Herli27052000/Lab11Web/blob/master/img/edit-artikel1.png)
 
 Di atas adalah contoh **ubah/edit** ***artikel pertama***
 
 Sementara dibawah adalah contoh **ubah/edit** ***artikel kedua*** 
 
-![edit-artikel2](img/edit-artikel2.png)
+![edit-artikel2](https://github.com/Herli27052000/Lab11Web/blob/master/img/edit-artikel2.png)
 
 ## 13). MENGHAPUS DATA
 Tambahkan fungsi/method baru pada **Controllers Artikel** dengan nama **delete().**
 
-![function-delete()](img/function-delete.png)
+![function-delete()](https://github.com/Herli27052000/Lab11Web/blob/master/img/function-delete.png)
 
 **PENJELASAN**
 
